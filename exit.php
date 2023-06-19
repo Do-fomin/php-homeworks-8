@@ -1,5 +1,6 @@
 <?php
 session_start();
 unset($_SESSION["username"]);
-header("Location: $_SERVER["HTTP_HOST"]}/index.php");
+$protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === 0 ? 'https://' : 'http://';
+header("Location:" . $protocol . $_SERVER["HTTP_HOST"]);
 exit;
