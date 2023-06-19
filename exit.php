@@ -1,5 +1,5 @@
 <?php
 session_start();
 unset($_SESSION["username"]);
-header("Location: http://localhost/php-homeworks-8/index.php");
+header("Location: $_SERVER["HTTP_HOST"]}/index.php");
 exit;
